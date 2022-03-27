@@ -25,8 +25,8 @@ print(states)
 # turtle.mainloop()
 
 
-while all_states != answered_states:
-    answer = screen.textinput(title="Guess the State", prompt="Name a state?")
+while len(all_states) != len(answered_states):
+    answer = screen.textinput(title=f"Guess the State {len(answered_states)}/50", prompt="Name a state?").title()
     if answer in all_states and answer not in answered_states:
         st_data = states[states.state == answer]
         t.goto(int(st_data.x), int(st_data.y))
