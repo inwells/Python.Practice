@@ -16,10 +16,11 @@ def deal(hand):
         c2 = random.choice(cards)
         return [c1,c2]
 
+
 def total(list):
     return sum(list)
 
-def compare(ptotal, dtotal):
+def comparison(ptotal, dtotal):
     if dtotal == 21:
         return "Dealer Wins"
     elif ptotal > 21:
@@ -32,6 +33,7 @@ def compare(ptotal, dtotal):
         return "Player Wins"
     else:
         return "Dealer Wins"
+
 
 def play():
     os.system('cls')
@@ -64,7 +66,7 @@ def play():
 
     print(f"Your final hand: {phand} {ptotal}")
     print(f"Dealer's final hand: {dhand} {dtotal}")
-    print(compare(ptotal, dtotal))
+    print(comparison(ptotal, dtotal))
 
 play_game = True
 while play_game == True:
