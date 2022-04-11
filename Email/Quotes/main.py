@@ -4,7 +4,7 @@ import random
 
 
 USERNAME = "apikey"
-PASSWORD = "***REMOVED***"
+PASSWORD = ""
 
 now = dt.datetime.now()
 weekday = now.weekday()
