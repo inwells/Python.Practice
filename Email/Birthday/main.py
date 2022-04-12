@@ -4,7 +4,8 @@ import pandas
 import random
 
 USERNAME = "apikey"
-PASSWORD = ""
+with open("..\\..\\api.key") as key_file:
+    PASSWORD = key_file.read()
 
 now = dt.datetime.now()
 today = (now.month, now.day)
@@ -21,12 +22,11 @@ def send_mail(email, content):
 
     ##################### Extra Hard Starting Project ######################
 
-# 1. Update the birthdays.csv
 data = pandas.read_csv("birthdays.csv")
 
+#use add value to overlapping birthdays into an array
 birth_dict = {(data_row["month"], data_row["day"]):{"fname":data_row["firstname"], "lname":data_row["lastname"], "email":data_row["email"]} for (index, data_row) in data.iterrows()}
 
-# 2. Check if today matches a birthday in the birthdays.csv
 
 if today in birth_dict:
     num = random.randrange(1,3)

@@ -1,1 +1,3 @@
-Blackjack/__pycache__/art.cpython-310.pyc
+*.pyc
+api.key
+.vscode
