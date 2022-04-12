@@ -22,6 +22,6 @@ if weekday == 0:
         connection.login(USERNAME,PASSWORD)
         connection.sendmail(
             "Johann <johann@itwells.com>",
-            "***REMOVED***",
+            "",
             f"from:johann@itwells.com\nSubject:Monday Motivation\n\n{quote}"
         )
