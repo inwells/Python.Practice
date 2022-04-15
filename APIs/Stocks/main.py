@@ -4,6 +4,7 @@ import smtplib
 import datetime as dt
 import os
 
+#list comprehension would remove the need for this by converting API response to a list. Yesterday would be [0].
 TODAY = dt.datetime.now()
 DATE = TODAY.date()
 if TODAY.weekday() == 6:
