@@ -47,9 +47,9 @@ now = dt.datetime.now()
 quantity = "30"
 
 pixela_data = {
-    "date": now.strftime("%Y%d%m"),
+    "date": now.strftime("%Y%m%d"),
     "quantity": quantity,
 }
 print(pixela_data)
-#response = requests.post(url=tracker_endpoint, json=pixela_data, headers=headers)
-#print(response.text)
+response = requests.post(url=tracker_endpoint, json=pixela_data, headers=headers)
+print(response.text)
