@@ -45,9 +45,9 @@ for exercise in ex_data["exercises"]:
         "workout": {
             "Date": TODAY,
             "Time": TIME,
-            "Exercise": exercise["name"].title(),
-            "Duration": exercise["duration_min"],
-            "Calories": exercise["nf_calories"]
+            "Exercise": str(exercise["name"].title()),
+            "Duration": str(exercise["duration_min"]),
+            "Calories": str(exercise["nf_calories"])
         }
     } 
 
@@ -58,4 +58,4 @@ for exercise in ex_data["exercises"]:
     print(sheet_data)
     sheet_response = requests.post(SHEETY_ENDPOINT, json=sheet_data, headers=sheet_header)
     print(sheet_response.raise_for_status)
-    print(sheet_response.text)
+    print(sheet_response.json())
