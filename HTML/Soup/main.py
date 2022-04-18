@@ -1,5 +1,6 @@
 from bs4 import BeautifulSoup
 import requests
+#what is disallowed https://news.ycombinator.com/robots.txt
 
 response = requests.get("https://news.ycombinator.com/news")
 yc_web_page = response.text
