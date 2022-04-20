@@ -1,7 +1,5 @@
 import requests
 from bs4 import BeautifulSoup
-import datetime as dt
-import json
 import spotipy
 from spotipy.oauth2 import SpotifyOAuth
 
@@ -12,8 +10,8 @@ sp = spotipy.Spotify(auth_manager=SpotifyOAuth(scope=scope))
 
 URL_BASE = "https://www.billboard.com/charts/hot-100/"
 
-#date_input = input("Which year, month, and day do you want to travel to?")
-date_input = "1989-02-14"
+date_input = input("Which year, month, and day do you want to travel to?")
+
 URL = f"{URL_BASE}{date_input}"
 USER = sp.current_user()
 
