@@ -1,4 +1,5 @@
 import time
+import math
 
 def speed_calc_decorator(function):
     def wrapper_function():
@@ -22,3 +23,6 @@ def slow_function():
 
 fast_function()
 slow_function()
+
+
+print(math.ceil(3.6))
